@@ -1,10 +1,10 @@
 # NodeJS + Sequelize + TypeScript
 
-Testes iniciais com Sequelize v5 + TypeScript no Node.
+Testes project Sequelize v5 + TypeScript no Node.
 
 ## Setup
 
-Crie um arquivo `.env` na raiz do projeto:
+setup `.env` to run local:
 
 ```
 NODE_ENV=development
