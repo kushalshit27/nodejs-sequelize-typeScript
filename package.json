@@ -21,7 +21,7 @@
     "@types/sequelize": "^4.28.8",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
-    "tslint": "^5.20.1",
+    "tslint": "^6.1.0",
     "typescript": "^3.7.4"
   },
   "dependencies": {
