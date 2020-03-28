@@ -2,15 +2,15 @@ import { Sequelize, Model, DataTypes, BuildOptions } from 'sequelize';
 
 export default class Database {
 
-    db: string;
-    user: string;
-    password: string;
-    host: string;
-    port: number;
-    maxPool: number;
-    minPool: number;
-    database: Sequelize;
-    dialect: string;
+    private db: string;
+    private user: string;
+    private password: string;
+    private host: string;
+    private port: number;
+    private maxPool: number;
+    private minPool: number;
+    private database: Sequelize;
+    private dbDialect: string;
 
     constructor() {
 
@@ -21,11 +21,11 @@ export default class Database {
         this.port = Number(process.env.DB_PORT) || 1433;
         this.maxPool = Number(process.env.MAX_POOL) || 10;
         this.minPool = Number(process.env.MIN_POOL) || 1;
-        this.dialect = process.env.DB_DIALECT || 'sqlite';
+        this.dbDialect = process.env.DB_DIALECT || 'sqlite';
 
         this.database = new Sequelize(this.db, this.user, this.password, {
-            host: this.host,
             dialect: 'sqlite',
+            host: this.host,
             storage: 'database.sqlite'
         })
 
