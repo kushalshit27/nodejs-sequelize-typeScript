@@ -37,7 +37,7 @@ export default class Server {
     private routingSetup() {
 
         // Instantiate mainRouter object
-        let router = new mainRouter().router;
+        const router = new mainRouter().router;
 
         // Add to server routes
         this.expressInstance.use('/', router);

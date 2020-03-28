@@ -8,7 +8,7 @@ dotenv.config()
 const port = normalizePort(process.env.PORT || 3000);
 
 // Instantiate the expressServer class
-let expressInstance = new expressServer().expressInstance;
+const expressInstance = new expressServer().expressInstance;
 
 // Make port available within server
 expressInstance.set('port', port);

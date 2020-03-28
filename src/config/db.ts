@@ -1,6 +1,4 @@
 import { Sequelize, Model, DataTypes, BuildOptions } from 'sequelize';
-import dotenv from 'dotenv'
-dotenv.config()
 
 export default class Database {
 
@@ -12,8 +10,10 @@ export default class Database {
     maxPool: number;
     minPool: number;
     database: Sequelize;
+    dialect: string;
 
     constructor() {
+
         this.db = process.env.DB_NAME || 'db_name';
         this.user = process.env.DB_USER || 'db_user';
         this.password = process.env.DB_PASS || '';
@@ -21,7 +21,15 @@ export default class Database {
         this.port = Number(process.env.DB_PORT) || 1433;
         this.maxPool = Number(process.env.MAX_POOL) || 10;
         this.minPool = Number(process.env.MIN_POOL) || 1;
+        this.dialect = process.env.DB_DIALECT || 'sqlite';
 
+        this.database = new Sequelize(this.db, this.user, this.password, {
+            host: this.host,
+            dialect: 'sqlite',
+            storage: 'database.sqlite'
+        })
+
+        /* Production
         this.database = new Sequelize(this.db, this.user, this.password, {
             host: this.host,
             dialect: 'mysql',
@@ -37,6 +45,7 @@ export default class Database {
                 idle: 10000
             }
         })
+        */
 
         this.database.authenticate()
             .then(() => {

@@ -58,7 +58,7 @@ export class UserController {
         })
             .then((removedRows: number) => {
                 res.json({
-                    removedRows: removedRows
+                    removedRows
                 });
             }).catch((err: any) => {
                 res.json(err);
