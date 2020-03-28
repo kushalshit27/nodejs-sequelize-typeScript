@@ -2,6 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/18153e3dc3dd460b9072b5c7ab9795b3)](https://app.codacy.com/manual/kushalshit27/nodejs-sequelize-typeScript?utm_source=github.com&utm_medium=referral&utm_content=kushalshit27/nodejs-sequelize-typeScript&utm_campaign=Badge_Grade_Dashboard)
 
+![Node.js CI](https://github.com/kushalshit27/nodejs-sequelize-typeScript/workflows/Node.js%20CI/badge.svg?branch=master)
 
 Testes project Sequelize v5 + TypeScript no Node.
 
