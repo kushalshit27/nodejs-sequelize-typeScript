@@ -1,6 +1,6 @@
 # NodeJS + Sequelize + TypeScript
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1e4e9a65747f4c38ba7402e363e54bdf)](https://app.codacy.com/manual/kushalshit27/nodejs-sequelize-typeScript?utm_source=github.com&utm_medium=referral&utm_content=kushalshit27/nodejs-sequelize-typeScript&utm_campaign=Badge_Grade_Settings)
+[![CodeFactor](https://www.codefactor.io/repository/github/kushalshit27/nodejs-sequelize-typescript/badge)](https://www.codefactor.io/repository/github/kushalshit27/nodejs-sequelize-typescript)
 
 
 Testes project Sequelize v5 + TypeScript no Node.
