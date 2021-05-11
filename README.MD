@@ -10,7 +10,7 @@ Testes project Sequelize v5 + TypeScript no Node.
 
 setup `.env` to run local:
 
-```
+```text
 NODE_ENV=development
 
 MYSQL_DATABASE=database_name
