@@ -1,7 +1,7 @@
-  
 import http from 'http';
 import expressServer from './server';
 import dotenv from 'dotenv'
+import Logger from './config/logger';
 dotenv.config()
 
 // Normalize port number which will expose server
@@ -40,11 +40,11 @@ function onError(error: NodeJS.ErrnoException): void {
     const bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
     switch (error.code) {
         case 'EACCES':
-            console.error(`${bind} requires elevated privileges`);
+            Logger.error(`${bind} requires elevated privileges`);
             process.exit(1);
             break;
         case 'EADDRINUSE':
-            console.error(`${bind} is already in use`);
+            Logger.error(`${bind} is already in use`);
             process.exit(1);
             break;
         default:
@@ -55,5 +55,5 @@ function onError(error: NodeJS.ErrnoException): void {
 function onListening(): void {
     const addr = server.address();
     const bind = typeof addr === 'string' ? `pipe ${addr}` : `Listetning on port ${addr.port}`;
-    console.log(bind);
+    Logger.info(bind);
 }

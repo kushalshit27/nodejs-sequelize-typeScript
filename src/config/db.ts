@@ -1,4 +1,5 @@
 import { Sequelize, Model, DataTypes, BuildOptions } from 'sequelize';
+import Logger from './logger';
 
 export default class Database {
 
@@ -49,10 +50,10 @@ export default class Database {
 
         this.database.authenticate()
             .then(() => {
-                console.log('Connection has been established successfully.');
+                Logger.info('Connection has been established successfully.');
             })
             .catch(err => {
-                console.error('Unable to connect to the database:', err);
+                Logger.error('Unable to connect to the database:', err);
             });
 
         this.database.sync({
