@@ -23,7 +23,7 @@ server.on('listening', onListening);
 
 // Port Normalization
 function normalizePort(val: number | string): number | string | boolean {
-    let validPort: number = typeof val === 'string' ? parseInt(val, 10) : val;
+    const validPort: number = typeof val === 'string' ? parseInt(val, 10) : val;
     if (isNaN(validPort)) {
         return val;
     } else if (validPort >= 0) {
