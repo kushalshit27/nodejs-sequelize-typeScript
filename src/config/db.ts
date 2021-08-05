@@ -61,4 +61,7 @@ export default class Database {
             // force: true
         })
     }
+    get getDatabase() : Sequelize {
+        return this.database;
+    }
 }

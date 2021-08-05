@@ -3,7 +3,7 @@ import database from '../config/db';
 import { Sequelize, Model, DataTypes, BuildOptions } from 'sequelize';
 
 // // Database connection instance
-const databaseInstance = new database().database;
+const databaseInstance = new database().getDatabase;
 
 // We need to declare an interface for our model that is basically what our class would be
 export interface UserInterface extends Model {
