@@ -30,7 +30,7 @@
     "@types/supertest": "^2.0.11",
     "chai": "^4.3.4",
     "mocha": "^8.4.0",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.20",
     "prettier": "^2.3.2",
     "supertest": "^4.0.2",
     "ts-node": "^8.10.2",
